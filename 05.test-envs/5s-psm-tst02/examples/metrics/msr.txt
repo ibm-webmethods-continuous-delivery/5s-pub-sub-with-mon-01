@@ -1,0 +1,787 @@
+# HELP sag_is_uptime_seconds Uptime for Server
+# TYPE sag_is_uptime_seconds counter
+sag_is_uptime_seconds{host="msr-pub"} 2991 1756806761828
+
+# HELP sag_is_server_threads The number of server threads currently in use.
+# TYPE sag_is_server_threads gauge
+sag_is_server_threads{host="msr-pub"} 15 1756806761828
+
+# HELP sag_is_server_maxthreads The maximum number of server threads defined.
+# TYPE sag_is_server_maxthreads gauge
+sag_is_server_maxthreads{host="msr-pub"} 60 1756806761828
+
+# HELP sag_is_max_memory_bytes The maximum memory for JVM.
+# TYPE sag_is_max_memory_bytes counter
+sag_is_max_memory_bytes{host="msr-pub"} 259522560 1756806761828
+
+# HELP sag_is_total_memory_bytes The total memory for JVM.
+# TYPE sag_is_total_memory_bytes counter
+sag_is_total_memory_bytes{host="msr-pub"} 259522560 1756806761828
+
+# HELP sag_is_free_memory_bytes The total free memory for JVM.
+# TYPE sag_is_free_memory_bytes gauge
+sag_is_free_memory_bytes{host="msr-pub"} 87557120 1756806761828
+
+# HELP sag_is_used_memory_bytes The total used memory for JVM.
+# TYPE sag_is_used_memory_bytes gauge
+sag_is_used_memory_bytes{host="msr-pub"} 171965440 1756806761828
+
+# HELP sag_is_services The total number of running services currently active.
+# TYPE sag_is_services gauge
+sag_is_services{host="msr-pub"} 24 1756806761828
+
+# HELP sag_is_max_services The highest number of running services that have ever been active concurrently on the server.
+# TYPE sag_is_max_services counter
+sag_is_max_services{host="msr-pub"} 24 1756806761828
+
+# HELP sag_is_service_threads The total number of service threads currently active.
+# TYPE sag_is_service_threads gauge
+sag_is_service_threads{host="msr-pub"} 12 1756806761828
+
+# HELP sag_is_peak_service_threads The highest number of service threads that have ever been active concurrently.
+# TYPE sag_is_peak_service_threads counter
+sag_is_peak_service_threads{host="msr-pub"} 12 1756806761828
+
+# HELP sag_is_system_threads The total number of system threads currently active.
+# TYPE sag_is_system_threads gauge
+sag_is_system_threads{host="msr-pub"} 156 1756806761828
+
+# HELP sag_is_max_system_threads The highest number of system threads that have ever been active concurrently on the server.
+# TYPE sag_is_max_system_threads counter
+sag_is_max_system_threads{host="msr-pub"} 156 1756806761828
+
+# HELP sag_is_number_current_connections The total number of sessions currently active.
+# TYPE sag_is_number_current_connections gauge
+sag_is_number_current_connections{host="msr-pub"} 146 1756806761828
+
+# HELP sag_is_max_connections The highest number of sessions that have ever run concurrently on the server.
+# TYPE sag_is_max_connections counter
+sag_is_max_connections{host="msr-pub"} 159 1756806761828
+
+# HELP sag_is_average_connection_time The average time per connection.
+# TYPE sag_is_average_connection_time gauge
+sag_is_average_connection_time{host="msr-pub"} 1032 1756806761828
+
+# HELP sag_is_http_requests The total number of requests that were completed during the polling interval.
+# TYPE sag_is_http_requests gauge
+sag_is_http_requests{host="msr-pub"} 15941 1756806761828
+
+# HELP sag_is_total_http_requests The total number of requests that were completed since the server was started.
+# TYPE sag_is_total_http_requests counter
+sag_is_total_http_requests{host="msr-pub"} 833028 1756806761828
+
+# HELP sag_is_avg_time_per_http_requests The average time per HTTP request.
+# TYPE sag_is_avg_time_per_http_requests gauge
+sag_is_avg_time_per_http_requests{host="msr-pub"} 37 1756806761828
+
+# HELP sag_is_service_starts_per_minute The number of Service starts per minute.
+# TYPE sag_is_service_starts_per_minute gauge
+sag_is_service_starts_per_minute{host="msr-pub"} 70353 1756806761828
+
+# HELP sag_is_service_completions_per_minute The number of Service completions per minute.
+# TYPE sag_is_service_completions_per_minute gauge
+sag_is_service_completions_per_minute{host="msr-pub"} 70329 1756806761828
+
+# HELP sag_is_request_starts_per_minute The number of Request starts per minute.
+# TYPE sag_is_request_starts_per_minute gauge
+sag_is_request_starts_per_minute{host="msr-pub"} 8812 1756806761828
+
+# HELP sag_is_request_completions_per_minute The number of Request completions per minute.
+# TYPE sag_is_request_completions_per_minute gauge
+sag_is_request_completions_per_minute{host="msr-pub"} 8800 1756806761828
+
+# HELP sag_is_number_nonservice_errors The number of non-Service errors.
+# TYPE sag_is_number_nonservice_errors counter
+sag_is_number_nonservice_errors{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_number_service_errors The number of Service errors.
+# TYPE sag_is_number_service_errors counter
+sag_is_number_service_errors{host="msr-pub"} 58691 1756806761828
+
+# HELP sag_is_number_nonservice_startup_errors The number of IS startup errors.
+# TYPE sag_is_number_nonservice_startup_errors counter
+sag_is_number_nonservice_startup_errors{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_number_service_invokes The number of Service invokes and errors.
+# TYPE sag_is_number_service_invokes counter
+sag_is_number_service_invokes{host="msr-pub"} 6744212 1756806761828
+
+# HELP sag_is_server_startup_Time The Service startup time (epoch time).
+# TYPE sag_is_server_startup_Time counter
+sag_is_server_startup_Time{host="msr-pub"} 1756803770735 1756806761828
+
+# HELP sag_is_number_service_errors_per_minute The number of Service errors in the last minute.
+# TYPE sag_is_number_service_errors_per_minute counter
+sag_is_number_service_errors_per_minute{host="msr-pub"} 1273 1756806761828
+
+# HELP sag_is_number_service_errors_excluding_internal_svc_per_minute The number of Service errors excluding IS Internal services in the last minute.
+# TYPE sag_is_number_service_errors_excluding_internal_svc_per_minute counter
+sag_is_number_service_errors_excluding_internal_svc_per_minute{host="msr-pub"} 1273 1756806761828
+
+# HELP sag_is_number_sessions_used The number of sessions currently active.
+# TYPE sag_is_number_sessions_used gauge
+sag_is_number_sessions_used{host="msr-pub"} 134 1756806761828
+
+# HELP sag_is_peak_number_sessions The highest number of sessions that have ever run concurrently on the server.
+# TYPE sag_is_peak_number_sessions counter
+sag_is_peak_number_sessions{host="msr-pub"} 150 1756806761828
+
+# HELP sag_is_max_number_sessions_allowed The maximum number of HTTP Sessions allowed.
+# TYPE sag_is_max_number_sessions_allowed gauge
+sag_is_max_number_sessions_allowed{host="msr-pub"} 2147483647 1756806761828
+
+# HELP sag_is_current_stateful_sessions The number of current stateful HTTP Sessions.
+# TYPE sag_is_current_stateful_sessions gauge
+sag_is_current_stateful_sessions{host="msr-pub"} 128 1756806761828
+
+# HELP sag_is_peak_stateful_sessions The peak number of stateful HTTP Sessions.
+# TYPE sag_is_peak_stateful_sessions counter
+sag_is_peak_stateful_sessions{host="msr-pub"} 139 1756806761828
+
+# HELP sag_is_stateful_sessions_limit The maximum number of stateful HTTP Sessions allowed.
+# TYPE sag_is_stateful_sessions_limit counter
+sag_is_stateful_sessions_limit{host="msr-pub"} 2147483647 1756806761828
+
+# HELP sag_is_request_duration The total service request time duration for this interval.
+# TYPE sag_is_request_duration gauge
+sag_is_request_duration{host="msr-pub"} 1176570 1756806761828
+
+# HELP sag_is_total_request_durations The total server duration time since last server restart.
+# TYPE sag_is_total_request_durations counter
+sag_is_total_request_durations{host="msr-pub"} 52247289 1756806761828
+
+# HELP sag_is_service_count The number of services of custom packages loaded.
+# TYPE sag_is_service_count gauge
+sag_is_service_count{host="msr-pub"} 21 1756806761828
+
+# HELP sag_is_adapter_count The number of adapters loaded.
+# TYPE sag_is_adapter_count gauge
+sag_is_adapter_count{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_custom_package_count The number of custom packages loaded.
+# TYPE sag_is_custom_package_count gauge
+sag_is_custom_package_count{host="msr-pub"} 4 1756806761828
+
+# HELP sag_is_system_package_count The number of system packages loaded.
+# TYPE sag_is_system_package_count gauge
+sag_is_system_package_count{host="msr-pub"} 4 1756806761828
+
+# HELP sag_is_cloudstream_count The number of cloud stream connectors loaded.
+# TYPE sag_is_cloudstream_count gauge
+sag_is_cloudstream_count{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_access The number of times that the service has executed since the server was last started.
+# TYPE sag_is_service_number_access gauge
+sag_is_service_number_access{service="CANONICALS.STARTUP:SYNCCANONICALSATSTARTUP",host="msr-pub"} 1 1756806761828
+
+# HELP sag_is_service_number_running The number of service is executing on the server at this instance.
+# TYPE sag_is_service_number_running gauge
+sag_is_service_number_running{service="CANONICALS.STARTUP:SYNCCANONICALSATSTARTUP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_cache_hit The total number of times that a cached result for this service has been accessed (hit).
+# TYPE sag_is_service_number_cache_hit gauge
+sag_is_service_number_cache_hit{service="CANONICALS.STARTUP:SYNCCANONICALSATSTARTUP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_hit_ratio The percentage of service requests that have been fulfilled by retrieving the results from cache.
+# TYPE sag_is_service_cache_hit_ratio gauge
+sag_is_service_cache_hit_ratio{service="CANONICALS.STARTUP:SYNCCANONICALSATSTARTUP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_entries The number of active cache entries for the service.
+# TYPE sag_is_service_cache_entries gauge
+sag_is_service_cache_entries{service="CANONICALS.STARTUP:SYNCCANONICALSATSTARTUP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_expires The number of expired cache entries for the service.
+# TYPE sag_is_service_cache_expires gauge
+sag_is_service_cache_expires{service="CANONICALS.STARTUP:SYNCCANONICALSATSTARTUP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_prefetch The total number of times the server has prefetched and cached the results for the service.
+# TYPE sag_is_service_number_prefetch gauge
+sag_is_service_number_prefetch{service="CANONICALS.STARTUP:SYNCCANONICALSATSTARTUP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_recent_prefetch The total number of times the server has prefetched and cached the results for the service in the last poll interval (10 mins default)
+# TYPE sag_is_service_number_recent_prefetch gauge
+sag_is_service_number_recent_prefetch{service="CANONICALS.STARTUP:SYNCCANONICALSATSTARTUP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_errors The total number of errors for the service.
+# TYPE sag_is_service_number_errors gauge
+sag_is_service_number_errors{service="CANONICALS.STARTUP:SYNCCANONICALSATSTARTUP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_access The number of times that the service has executed since the server was last started.
+# TYPE sag_is_service_number_access gauge
+sag_is_service_number_access{service="EXAMPLE.PUBLISHER:SENDAMESSAGE",host="msr-pub"} 1665037 1756806761828
+
+# HELP sag_is_service_number_running The number of service is executing on the server at this instance.
+# TYPE sag_is_service_number_running gauge
+sag_is_service_number_running{service="EXAMPLE.PUBLISHER:SENDAMESSAGE",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_cache_hit The total number of times that a cached result for this service has been accessed (hit).
+# TYPE sag_is_service_number_cache_hit gauge
+sag_is_service_number_cache_hit{service="EXAMPLE.PUBLISHER:SENDAMESSAGE",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_hit_ratio The percentage of service requests that have been fulfilled by retrieving the results from cache.
+# TYPE sag_is_service_cache_hit_ratio gauge
+sag_is_service_cache_hit_ratio{service="EXAMPLE.PUBLISHER:SENDAMESSAGE",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_entries The number of active cache entries for the service.
+# TYPE sag_is_service_cache_entries gauge
+sag_is_service_cache_entries{service="EXAMPLE.PUBLISHER:SENDAMESSAGE",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_expires The number of expired cache entries for the service.
+# TYPE sag_is_service_cache_expires gauge
+sag_is_service_cache_expires{service="EXAMPLE.PUBLISHER:SENDAMESSAGE",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_prefetch The total number of times the server has prefetched and cached the results for the service.
+# TYPE sag_is_service_number_prefetch gauge
+sag_is_service_number_prefetch{service="EXAMPLE.PUBLISHER:SENDAMESSAGE",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_recent_prefetch The total number of times the server has prefetched and cached the results for the service in the last poll interval (10 mins default)
+# TYPE sag_is_service_number_recent_prefetch gauge
+sag_is_service_number_recent_prefetch{service="EXAMPLE.PUBLISHER:SENDAMESSAGE",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_errors The total number of errors for the service.
+# TYPE sag_is_service_number_errors gauge
+sag_is_service_number_errors{service="EXAMPLE.PUBLISHER:SENDAMESSAGE",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_access The number of times that the service has executed since the server was last started.
+# TYPE sag_is_service_number_access gauge
+sag_is_service_number_access{service="WMDEMO.MOCKUP.FLOW:GENERICGET",host="msr-pub"} 836741 1756806761828
+
+# HELP sag_is_service_number_running The number of service is executing on the server at this instance.
+# TYPE sag_is_service_number_running gauge
+sag_is_service_number_running{service="WMDEMO.MOCKUP.FLOW:GENERICGET",host="msr-pub"} 12 1756806761828
+
+# HELP sag_is_service_number_cache_hit The total number of times that a cached result for this service has been accessed (hit).
+# TYPE sag_is_service_number_cache_hit gauge
+sag_is_service_number_cache_hit{service="WMDEMO.MOCKUP.FLOW:GENERICGET",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_hit_ratio The percentage of service requests that have been fulfilled by retrieving the results from cache.
+# TYPE sag_is_service_cache_hit_ratio gauge
+sag_is_service_cache_hit_ratio{service="WMDEMO.MOCKUP.FLOW:GENERICGET",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_entries The number of active cache entries for the service.
+# TYPE sag_is_service_cache_entries gauge
+sag_is_service_cache_entries{service="WMDEMO.MOCKUP.FLOW:GENERICGET",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_expires The number of expired cache entries for the service.
+# TYPE sag_is_service_cache_expires gauge
+sag_is_service_cache_expires{service="WMDEMO.MOCKUP.FLOW:GENERICGET",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_prefetch The total number of times the server has prefetched and cached the results for the service.
+# TYPE sag_is_service_number_prefetch gauge
+sag_is_service_number_prefetch{service="WMDEMO.MOCKUP.FLOW:GENERICGET",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_recent_prefetch The total number of times the server has prefetched and cached the results for the service in the last poll interval (10 mins default)
+# TYPE sag_is_service_number_recent_prefetch gauge
+sag_is_service_number_recent_prefetch{service="WMDEMO.MOCKUP.FLOW:GENERICGET",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_errors The total number of errors for the service.
+# TYPE sag_is_service_number_errors gauge
+sag_is_service_number_errors{service="WMDEMO.MOCKUP.FLOW:GENERICGET",host="msr-pub"} 8457 1756806761828
+
+# HELP sag_is_service_number_access The number of times that the service has executed since the server was last started.
+# TYPE sag_is_service_number_access gauge
+sag_is_service_number_access{service="WMDEMO.MOCKUP.STARTUP:DECLARESECURITY",host="msr-pub"} 1 1756806761828
+
+# HELP sag_is_service_number_running The number of service is executing on the server at this instance.
+# TYPE sag_is_service_number_running gauge
+sag_is_service_number_running{service="WMDEMO.MOCKUP.STARTUP:DECLARESECURITY",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_cache_hit The total number of times that a cached result for this service has been accessed (hit).
+# TYPE sag_is_service_number_cache_hit gauge
+sag_is_service_number_cache_hit{service="WMDEMO.MOCKUP.STARTUP:DECLARESECURITY",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_hit_ratio The percentage of service requests that have been fulfilled by retrieving the results from cache.
+# TYPE sag_is_service_cache_hit_ratio gauge
+sag_is_service_cache_hit_ratio{service="WMDEMO.MOCKUP.STARTUP:DECLARESECURITY",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_entries The number of active cache entries for the service.
+# TYPE sag_is_service_cache_entries gauge
+sag_is_service_cache_entries{service="WMDEMO.MOCKUP.STARTUP:DECLARESECURITY",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_expires The number of expired cache entries for the service.
+# TYPE sag_is_service_cache_expires gauge
+sag_is_service_cache_expires{service="WMDEMO.MOCKUP.STARTUP:DECLARESECURITY",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_prefetch The total number of times the server has prefetched and cached the results for the service.
+# TYPE sag_is_service_number_prefetch gauge
+sag_is_service_number_prefetch{service="WMDEMO.MOCKUP.STARTUP:DECLARESECURITY",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_recent_prefetch The total number of times the server has prefetched and cached the results for the service in the last poll interval (10 mins default)
+# TYPE sag_is_service_number_recent_prefetch gauge
+sag_is_service_number_recent_prefetch{service="WMDEMO.MOCKUP.STARTUP:DECLARESECURITY",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_errors The total number of errors for the service.
+# TYPE sag_is_service_number_errors gauge
+sag_is_service_number_errors{service="WMDEMO.MOCKUP.STARTUP:DECLARESECURITY",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_access The number of times that the service has executed since the server was last started.
+# TYPE sag_is_service_number_access gauge
+sag_is_service_number_access{service="WMDEMO.MOCKUP.UTIL.J:GENERATERANDOMSTRINGOFGIVENLENGTH",host="msr-pub"} 836741 1756806761828
+
+# HELP sag_is_service_number_running The number of service is executing on the server at this instance.
+# TYPE sag_is_service_number_running gauge
+sag_is_service_number_running{service="WMDEMO.MOCKUP.UTIL.J:GENERATERANDOMSTRINGOFGIVENLENGTH",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_cache_hit The total number of times that a cached result for this service has been accessed (hit).
+# TYPE sag_is_service_number_cache_hit gauge
+sag_is_service_number_cache_hit{service="WMDEMO.MOCKUP.UTIL.J:GENERATERANDOMSTRINGOFGIVENLENGTH",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_hit_ratio The percentage of service requests that have been fulfilled by retrieving the results from cache.
+# TYPE sag_is_service_cache_hit_ratio gauge
+sag_is_service_cache_hit_ratio{service="WMDEMO.MOCKUP.UTIL.J:GENERATERANDOMSTRINGOFGIVENLENGTH",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_entries The number of active cache entries for the service.
+# TYPE sag_is_service_cache_entries gauge
+sag_is_service_cache_entries{service="WMDEMO.MOCKUP.UTIL.J:GENERATERANDOMSTRINGOFGIVENLENGTH",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_expires The number of expired cache entries for the service.
+# TYPE sag_is_service_cache_expires gauge
+sag_is_service_cache_expires{service="WMDEMO.MOCKUP.UTIL.J:GENERATERANDOMSTRINGOFGIVENLENGTH",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_prefetch The total number of times the server has prefetched and cached the results for the service.
+# TYPE sag_is_service_number_prefetch gauge
+sag_is_service_number_prefetch{service="WMDEMO.MOCKUP.UTIL.J:GENERATERANDOMSTRINGOFGIVENLENGTH",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_recent_prefetch The total number of times the server has prefetched and cached the results for the service in the last poll interval (10 mins default)
+# TYPE sag_is_service_number_recent_prefetch gauge
+sag_is_service_number_recent_prefetch{service="WMDEMO.MOCKUP.UTIL.J:GENERATERANDOMSTRINGOFGIVENLENGTH",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_errors The total number of errors for the service.
+# TYPE sag_is_service_number_errors gauge
+sag_is_service_number_errors{service="WMDEMO.MOCKUP.UTIL.J:GENERATERANDOMSTRINGOFGIVENLENGTH",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_access The number of times that the service has executed since the server was last started.
+# TYPE sag_is_service_number_access gauge
+sag_is_service_number_access{service="WMDEMO.MOCKUP.UTIL.J:GETCURRENTHOSTNAME",host="msr-pub"} 836753 1756806761828
+
+# HELP sag_is_service_number_running The number of service is executing on the server at this instance.
+# TYPE sag_is_service_number_running gauge
+sag_is_service_number_running{service="WMDEMO.MOCKUP.UTIL.J:GETCURRENTHOSTNAME",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_cache_hit The total number of times that a cached result for this service has been accessed (hit).
+# TYPE sag_is_service_number_cache_hit gauge
+sag_is_service_number_cache_hit{service="WMDEMO.MOCKUP.UTIL.J:GETCURRENTHOSTNAME",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_hit_ratio The percentage of service requests that have been fulfilled by retrieving the results from cache.
+# TYPE sag_is_service_cache_hit_ratio gauge
+sag_is_service_cache_hit_ratio{service="WMDEMO.MOCKUP.UTIL.J:GETCURRENTHOSTNAME",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_entries The number of active cache entries for the service.
+# TYPE sag_is_service_cache_entries gauge
+sag_is_service_cache_entries{service="WMDEMO.MOCKUP.UTIL.J:GETCURRENTHOSTNAME",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_expires The number of expired cache entries for the service.
+# TYPE sag_is_service_cache_expires gauge
+sag_is_service_cache_expires{service="WMDEMO.MOCKUP.UTIL.J:GETCURRENTHOSTNAME",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_prefetch The total number of times the server has prefetched and cached the results for the service.
+# TYPE sag_is_service_number_prefetch gauge
+sag_is_service_number_prefetch{service="WMDEMO.MOCKUP.UTIL.J:GETCURRENTHOSTNAME",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_recent_prefetch The total number of times the server has prefetched and cached the results for the service in the last poll interval (10 mins default)
+# TYPE sag_is_service_number_recent_prefetch gauge
+sag_is_service_number_recent_prefetch{service="WMDEMO.MOCKUP.UTIL.J:GETCURRENTHOSTNAME",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_errors The total number of errors for the service.
+# TYPE sag_is_service_number_errors gauge
+sag_is_service_number_errors{service="WMDEMO.MOCKUP.UTIL.J:GETCURRENTHOSTNAME",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_access The number of times that the service has executed since the server was last started.
+# TYPE sag_is_service_number_access gauge
+sag_is_service_number_access{service="WMDEMO.MOCKUP.UTIL.J:PROBABILITYEXCEPTION",host="msr-pub"} 1673482 1756806761828
+
+# HELP sag_is_service_number_running The number of service is executing on the server at this instance.
+# TYPE sag_is_service_number_running gauge
+sag_is_service_number_running{service="WMDEMO.MOCKUP.UTIL.J:PROBABILITYEXCEPTION",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_cache_hit The total number of times that a cached result for this service has been accessed (hit).
+# TYPE sag_is_service_number_cache_hit gauge
+sag_is_service_number_cache_hit{service="WMDEMO.MOCKUP.UTIL.J:PROBABILITYEXCEPTION",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_hit_ratio The percentage of service requests that have been fulfilled by retrieving the results from cache.
+# TYPE sag_is_service_cache_hit_ratio gauge
+sag_is_service_cache_hit_ratio{service="WMDEMO.MOCKUP.UTIL.J:PROBABILITYEXCEPTION",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_entries The number of active cache entries for the service.
+# TYPE sag_is_service_cache_entries gauge
+sag_is_service_cache_entries{service="WMDEMO.MOCKUP.UTIL.J:PROBABILITYEXCEPTION",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_expires The number of expired cache entries for the service.
+# TYPE sag_is_service_cache_expires gauge
+sag_is_service_cache_expires{service="WMDEMO.MOCKUP.UTIL.J:PROBABILITYEXCEPTION",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_prefetch The total number of times the server has prefetched and cached the results for the service.
+# TYPE sag_is_service_number_prefetch gauge
+sag_is_service_number_prefetch{service="WMDEMO.MOCKUP.UTIL.J:PROBABILITYEXCEPTION",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_recent_prefetch The total number of times the server has prefetched and cached the results for the service in the last poll interval (10 mins default)
+# TYPE sag_is_service_number_recent_prefetch gauge
+sag_is_service_number_recent_prefetch{service="WMDEMO.MOCKUP.UTIL.J:PROBABILITYEXCEPTION",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_errors The total number of errors for the service.
+# TYPE sag_is_service_number_errors gauge
+sag_is_service_number_errors{service="WMDEMO.MOCKUP.UTIL.J:PROBABILITYEXCEPTION",host="msr-pub"} 50234 1756806761828
+
+# HELP sag_is_service_number_access The number of times that the service has executed since the server was last started.
+# TYPE sag_is_service_number_access gauge
+sag_is_service_number_access{service="WMDEMO.MOCKUP.UTIL.J:SLEEP",host="msr-pub"} 836741 1756806761828
+
+# HELP sag_is_service_number_running The number of service is executing on the server at this instance.
+# TYPE sag_is_service_number_running gauge
+sag_is_service_number_running{service="WMDEMO.MOCKUP.UTIL.J:SLEEP",host="msr-pub"} 12 1756806761828
+
+# HELP sag_is_service_number_cache_hit The total number of times that a cached result for this service has been accessed (hit).
+# TYPE sag_is_service_number_cache_hit gauge
+sag_is_service_number_cache_hit{service="WMDEMO.MOCKUP.UTIL.J:SLEEP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_hit_ratio The percentage of service requests that have been fulfilled by retrieving the results from cache.
+# TYPE sag_is_service_cache_hit_ratio gauge
+sag_is_service_cache_hit_ratio{service="WMDEMO.MOCKUP.UTIL.J:SLEEP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_entries The number of active cache entries for the service.
+# TYPE sag_is_service_cache_entries gauge
+sag_is_service_cache_entries{service="WMDEMO.MOCKUP.UTIL.J:SLEEP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_cache_expires The number of expired cache entries for the service.
+# TYPE sag_is_service_cache_expires gauge
+sag_is_service_cache_expires{service="WMDEMO.MOCKUP.UTIL.J:SLEEP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_prefetch The total number of times the server has prefetched and cached the results for the service.
+# TYPE sag_is_service_number_prefetch gauge
+sag_is_service_number_prefetch{service="WMDEMO.MOCKUP.UTIL.J:SLEEP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_recent_prefetch The total number of times the server has prefetched and cached the results for the service in the last poll interval (10 mins default)
+# TYPE sag_is_service_number_recent_prefetch gauge
+sag_is_service_number_recent_prefetch{service="WMDEMO.MOCKUP.UTIL.J:SLEEP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_service_number_errors The total number of errors for the service.
+# TYPE sag_is_service_number_errors gauge
+sag_is_service_number_errors{service="WMDEMO.MOCKUP.UTIL.J:SLEEP",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_jvm_thread_state_timed_waiting_count The number of WAITING threads with a timeout
+# TYPE sag_is_jvm_thread_state_timed_waiting_count gauge
+sag_is_jvm_thread_state_timed_waiting_count{host="msr-pub"} 87 1756806761828
+
+# HELP sag_is_jvm_memory_pool_max_mbytes The total number of allocated megabytes in the named memory pool
+# TYPE sag_is_jvm_memory_pool_max_mbytes gauge
+sag_is_jvm_memory_pool_max_mbytes{name="Eden_space_Space",host="msr-pub",poolType="HEAP"} 0 1756806761828
+
+# HELP sag_is_jvm_thread_state_terminated_count The number of TERMINATED threads
+# TYPE sag_is_jvm_thread_state_terminated_count gauge
+sag_is_jvm_thread_state_terminated_count{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_jvm_memory_buffer_pool_capacity_mbytes The total number of allocated megabytes from NIO buffer pools
+# TYPE sag_is_jvm_memory_buffer_pool_capacity_mbytes gauge
+sag_is_jvm_memory_buffer_pool_capacity_mbytes{name="mapped_space__dash__space__non_dash_volatile_space_memory_",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_jvm_threads_waited_count The number of waited threads
+# TYPE sag_is_jvm_threads_waited_count gauge
+sag_is_jvm_threads_waited_count{host="msr-pub"} 3393573 1756806761828
+
+# HELP sag_is_jvm_memory_buffer_pool_capacity_mbytes The total number of allocated megabytes from NIO buffer pools
+# TYPE sag_is_jvm_memory_buffer_pool_capacity_mbytes gauge
+sag_is_jvm_memory_buffer_pool_capacity_mbytes{name="direct",host="msr-pub"} 32 1756806761828
+
+# HELP sag_is_jvm_objects_pending_finalizer_count The number of objects ready for GC
+# TYPE sag_is_jvm_objects_pending_finalizer_count gauge
+sag_is_jvm_objects_pending_finalizer_count{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_jvm_memory_pool_max_mbytes The total number of allocated megabytes in the named memory pool
+# TYPE sag_is_jvm_memory_pool_max_mbytes gauge
+sag_is_jvm_memory_pool_max_mbytes{name="Metaspace",host="msr-pub",poolType="NON_HEAP"} 0 1756806761828
+
+# HELP sag_is_jvm_memory_pool_max_mbytes The total number of allocated megabytes in the named memory pool
+# TYPE sag_is_jvm_memory_pool_max_mbytes gauge
+sag_is_jvm_memory_pool_max_mbytes{name="Tenured_space_Gen",host="msr-pub",poolType="HEAP"} 0 1756806761828
+
+# HELP sag_is_jvm_memory_pool_max_mbytes The total number of allocated megabytes in the named memory pool
+# TYPE sag_is_jvm_memory_pool_max_mbytes gauge
+sag_is_jvm_memory_pool_max_mbytes{name="Survivor_space_Space",host="msr-pub",poolType="HEAP"} 0 1756806761828
+
+# HELP sag_is_jvm_threads_native_count The number of threads in native code
+# TYPE sag_is_jvm_threads_native_count gauge
+sag_is_jvm_threads_native_count{host="msr-pub"} 7 1756806761828
+
+# HELP sag_is_jvm_thread_state_new_count The number of NEW threads
+# TYPE sag_is_jvm_thread_state_new_count gauge
+sag_is_jvm_thread_state_new_count{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_jvm_threads_waited_millis Total number of milliseconds that threads have waited for a lock
+# TYPE sag_is_jvm_threads_waited_millis gauge
+sag_is_jvm_threads_waited_millis{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_jvm_memory_heap_used_mbytes The total number of allocated megabytes from heap memory
+# TYPE sag_is_jvm_memory_heap_used_mbytes gauge
+sag_is_jvm_memory_heap_used_mbytes{host="msr-pub"} 185 1756806761828
+
+# HELP sag_is_jvm_thread_state_blocked_count The number of BLOCKED threads
+# TYPE sag_is_jvm_thread_state_blocked_count gauge
+sag_is_jvm_thread_state_blocked_count{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_jvm_threads_blocked_count The number of blocked threads
+# TYPE sag_is_jvm_threads_blocked_count gauge
+sag_is_jvm_threads_blocked_count{host="msr-pub"} 3002772 1756806761828
+
+# HELP sag_is_jvm_memory_pool_max_mbytes The total number of allocated megabytes in the named memory pool
+# TYPE sag_is_jvm_memory_pool_max_mbytes gauge
+sag_is_jvm_memory_pool_max_mbytes{name="Compressed_space_Class_space_Space",host="msr-pub",poolType="NON_HEAP"} 0 1756806761828
+
+# HELP sag_is_jvm_gc_collection_millis The total milliseconds from garbage collection cycle
+# TYPE sag_is_jvm_gc_collection_millis gauge
+sag_is_jvm_gc_collection_millis{name="MarkSweepCompact",host="msr-pub"} 26835 1756806761828
+
+# HELP sag_is_jvm_threads_blocked_millis Total number of milliseconds that threads have been in a blocked state
+# TYPE sag_is_jvm_threads_blocked_millis gauge
+sag_is_jvm_threads_blocked_millis{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_jvm_thread_state_runnable_count The number of RUNNABLE threads
+# TYPE sag_is_jvm_thread_state_runnable_count gauge
+sag_is_jvm_thread_state_runnable_count{host="msr-pub"} 11 1756806761828
+
+# HELP sag_is_jvm_memory_pool_max_mbytes The total number of allocated megabytes in the named memory pool
+# TYPE sag_is_jvm_memory_pool_max_mbytes gauge
+sag_is_jvm_memory_pool_max_mbytes{name="CodeHeap_space__non_dash_nmethods_",host="msr-pub",poolType="NON_HEAP"} 0 1756806761828
+
+# HELP sag_is_jvm_memory_nonheap_used_mbytes The total number of allocated megabytes NOT from heap memory
+# TYPE sag_is_jvm_memory_nonheap_used_mbytes gauge
+sag_is_jvm_memory_nonheap_used_mbytes{host="msr-pub"} 150 1756806761828
+
+# HELP sag_is_jvm_memory_pool_max_mbytes The total number of allocated megabytes in the named memory pool
+# TYPE sag_is_jvm_memory_pool_max_mbytes gauge
+sag_is_jvm_memory_pool_max_mbytes{name="CodeHeap_space__profiled_space_nmethods_",host="msr-pub",poolType="NON_HEAP"} 0 1756806761828
+
+# HELP sag_is_jvm_classes_unloaded_total The total number of classes unloaded in the JVM since startup
+# TYPE sag_is_jvm_classes_unloaded_total gauge
+sag_is_jvm_classes_unloaded_total{host="msr-pub"} 302 1756806761828
+
+# HELP sag_is_jvm_gc_collection_millis The total milliseconds from garbage collection cycle
+# TYPE sag_is_jvm_gc_collection_millis gauge
+sag_is_jvm_gc_collection_millis{name="Copy",host="msr-pub"} 27765 1756806761828
+
+# HELP sag_is_jvm_classes_loaded_total The total number of current classes loaded in the JVM
+# TYPE sag_is_jvm_classes_loaded_total gauge
+sag_is_jvm_classes_loaded_total{host="msr-pub"} 14145 1756806761828
+
+# HELP sag_is_jvm_thread_state_waiting_count The number of WAITING threads without a timeout
+# TYPE sag_is_jvm_thread_state_waiting_count gauge
+sag_is_jvm_thread_state_waiting_count{host="msr-pub"} 63 1756806761828
+
+# HELP sag_is_jvm_memory_buffer_pool_capacity_mbytes The total number of allocated megabytes from NIO buffer pools
+# TYPE sag_is_jvm_memory_buffer_pool_capacity_mbytes gauge
+sag_is_jvm_memory_buffer_pool_capacity_mbytes{name="mapped",host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_jvm_memory_pool_max_mbytes The total number of allocated megabytes in the named memory pool
+# TYPE sag_is_jvm_memory_pool_max_mbytes gauge
+sag_is_jvm_memory_pool_max_mbytes{name="CodeHeap_space__non_dash_profiled_space_nmethods_",host="msr-pub",poolType="NON_HEAP"} 0 1756806761828
+
+# HELP sag_is_jvm_classes_total The total number of classes ever loaded in the JVM since startup
+# TYPE sag_is_jvm_classes_total gauge
+sag_is_jvm_classes_total{host="msr-pub"} 14447 1756806761828
+
+# HELP sag_is_jvm_threads_suspend_count The number of suspended threads
+# TYPE sag_is_jvm_threads_suspend_count gauge
+sag_is_jvm_threads_suspend_count{host="msr-pub"} 0 1756806761828
+
+# HELP sag_is_server_proc_sys_percent 0-100 cpu percentage for the OS
+# TYPE sag_is_server_proc_sys_percent gauge
+sag_is_server_proc_sys_percent{host="msr-pub"} 53 1756806761829
+
+# HELP sag_is_server_open_files_count Total used file descriptors (Linux-only)
+# TYPE sag_is_server_open_files_count gauge
+sag_is_server_open_files_count{host="msr-pub"} 887 1756806761829
+
+# HELP sag_is_server_total_memory_mbytes Total physical memory in megabytes
+# TYPE sag_is_server_total_memory_mbytes gauge
+sag_is_server_total_memory_mbytes{host="msr-pub"} 400 1756806761829
+
+# HELP sag_is_server_total_disk_mbytes Total disk space in megabytes
+# TYPE sag_is_server_total_disk_mbytes gauge
+sag_is_server_total_disk_mbytes{host="msr-pub"} 1031018 1756806761829
+
+# HELP sag_is_server_used_disk_mbytes Used disk space in megabytes
+# TYPE sag_is_server_used_disk_mbytes gauge
+sag_is_server_used_disk_mbytes{host="msr-pub"} 16662 1756806761829
+
+# HELP sag_is_server_used_memory_mbytes Used physical memory in megabytes
+# TYPE sag_is_server_used_memory_mbytes gauge
+sag_is_server_used_memory_mbytes{host="msr-pub"} 398 1756806761829
+
+# HELP sag_is_server_sysload_average Number of threads waiting for CPU resources (Linux-only)
+# TYPE sag_is_server_sysload_average gauge
+sag_is_server_sysload_average{host="msr-pub"} 0.64697265625 1756806761829
+
+# HELP sag_is_server_proc_cpu_percent 0-100 cpu percentage for the IS JVM
+# TYPE sag_is_server_proc_cpu_percent gauge
+sag_is_server_proc_cpu_percent{host="msr-pub"} 53 1756806761829
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="pub.flow:debugLog",host="msr-pub",apiCat="SERVICE_HTTP"} 8812 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="pub.flow:debugLog",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="500",execStat="N",service="wmDemo.Mockup.util.j:probabilityException",host="msr-pub",apiCat="SERVICE_HTTP"} 517 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="500",execStat="N",service="wmDemo.Mockup.util.j:probabilityException",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="1",execStat="Y",service="pub.publish:publish",host="msr-pub",apiCat="SERVICE_JAVA"} 17517 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="1",execStat="Y",service="pub.publish:publish",host="msr-pub",apiCat="SERVICE_JAVA"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="1",execStat="Y",service="wm.server.query:getPrometheusStats",host="msr-pub",apiCat="SERVICE_JAVA"} 12 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="1",execStat="Y",service="wm.server.query:getPrometheusStats",host="msr-pub",apiCat="SERVICE_JAVA"} 4 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wmDemo.Mockup.util.j:generateRandomStringOfGivenLength",host="msr-pub",apiCat="SERVICE_HTTP"} 8800 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wmDemo.Mockup.util.j:generateRandomStringOfGivenLength",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wmDemo.Mockup.util.j:getCurrentHostName",host="msr-pub",apiCat="SERVICE_HTTP"} 8812 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wmDemo.Mockup.util.j:getCurrentHostName",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="1",execStat="Y",service="pub.event.stats:logToFile",host="msr-pub",apiCat="SERVICE_JAVA"} 1 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="1",execStat="Y",service="pub.event.stats:logToFile",host="msr-pub",apiCat="SERVICE_JAVA"} 1 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="500",execStat="N",service="wmDemo.Mockup.flow:genericGet",host="msr-pub",apiCat="SERVICE_FLOW"} 95 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="500",execStat="N",service="wmDemo.Mockup.flow:genericGet",host="msr-pub",apiCat="SERVICE_FLOW"} 95 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wm.server.query:getCircuitBreakerStats",host="msr-pub",apiCat="SERVICE_HTTP"} 12 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wm.server.query:getCircuitBreakerStats",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wm.server.query:getStats",host="msr-pub",apiCat="SERVICE_HTTP"} 12 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wm.server.query:getStats",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wmDemo.Mockup.util.j:probabilityException",host="msr-pub",apiCat="SERVICE_HTTP"} 17083 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wmDemo.Mockup.util.j:probabilityException",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wm.server.query:getServiceStats",host="msr-pub",apiCat="SERVICE_HTTP"} 12 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wm.server.query:getServiceStats",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="Example.Publisher:sendAMessage",host="msr-pub",apiCat="SERVICE_FLOW"} 17517 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="Example.Publisher:sendAMessage",host="msr-pub",apiCat="SERVICE_FLOW"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="pub.utils:generateUUID",origin="rad_wmDemo.Mockup.restResource:genericResource_genericResource",host="msr-pub",apiCat="API_REST"} 8812 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="pub.utils:generateUUID",origin="rad_wmDemo.Mockup.restResource:genericResource_genericResource",host="msr-pub",apiCat="API_REST"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wmDemo.Mockup.util.j:sleep",host="msr-pub",apiCat="SERVICE_HTTP"} 8800 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wmDemo.Mockup.util.j:sleep",host="msr-pub",apiCat="SERVICE_HTTP"} 35 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="pub.flow:getLastError",host="msr-pub",apiCat="SERVICE_HTTP"} 422 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="pub.flow:getLastError",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wm.client.integrationlive.health.HybridConnectionHealth:getConnectionHealthStatus",host="msr-pub",apiCat="SERVICE_HTTP"} 12 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wm.client.integrationlive.health.HybridConnectionHealth:getConnectionHealthStatus",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="pub.document:documentToXMLValues",host="msr-pub",apiCat="SERVICE_HTTP"} 422 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="pub.document:documentToXMLValues",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="pub.flow:setResponse2",host="msr-pub",apiCat="SERVICE_HTTP"} 12 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="pub.flow:setResponse2",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wm.server.publish:publish",host="msr-pub",apiCat="SERVICE_HTTP"} 17517 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wm.server.publish:publish",host="msr-pub",apiCat="SERVICE_HTTP"} 0 1756806710981
+
+# HELP sag_is_service_requests_total The total execution counts for the IS service in the last completed time interval
+# TYPE sag_is_service_requests_total gauge
+sag_is_service_requests_total{code="200",execStat="Y",service="wmDemo.Mockup.flow:genericGet",host="msr-pub",apiCat="SERVICE_FLOW"} 8705 1756806710981
+
+# HELP sag_is_service_requests_avg_exec_millis The average number of milliseconds required to process the IS service in the last completed time interval
+# TYPE sag_is_service_requests_avg_exec_millis gauge
+sag_is_service_requests_avg_exec_millis{code="200",execStat="Y",service="wmDemo.Mockup.flow:genericGet",host="msr-pub",apiCat="SERVICE_FLOW"} 36 1756806710981
+
+# HELP sag_is_server_hybrid_umsessions The total number of times hybrid um session created since Server start for all the accounts
+# TYPE sag_is_server_hybrid_umsessions counter
+sag_is_server_hybrid_umsessions{host="msr-pub"} 0 1756806761828

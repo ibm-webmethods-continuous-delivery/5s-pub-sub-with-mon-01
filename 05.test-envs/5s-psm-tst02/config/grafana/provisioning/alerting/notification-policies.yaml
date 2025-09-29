@@ -1,0 +1,17 @@
+apiVersion: 1
+
+policies:
+- orgId: 1
+  receiver: um-email-alerts
+  group_by: [ 'alertname', 'durable_name' ]
+  group_wait: 10s
+  group_interval: 5m
+  repeat_interval: 12h
+  routes:
+  - receiver: um-email-alerts
+    matchers:
+    - alertname =~ "UM.*"
+    group_by: [ 'alertname', 'durable_name' ]
+    group_wait: 10s
+    group_interval: 5m
+    repeat_interval: 1h

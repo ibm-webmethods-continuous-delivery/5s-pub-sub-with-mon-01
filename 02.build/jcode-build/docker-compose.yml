@@ -1,0 +1,19 @@
+services:
+  msr:
+    image: ${PSM_MSR_CONTAINER_IMAGE}:${PSM_MSR_CONTAINER_TAG}
+    hostname: wm-tools-jcode
+    volumes:
+      # Our Code
+      - ../../01.code/is-packages/Canonicals/:${PSM_GUEST_PACKAGES_FOLDER}/Canonicals/
+      - ../../01.code/is-packages/CommonUtils/:${PSM_GUEST_PACKAGES_FOLDER}/CommonUtils/
+      - ../../01.code/is-packages/PublisherExample/:${PSM_GUEST_PACKAGES_FOLDER}/PublisherExample/
+      - ../../01.code/is-packages/ServiceMockup/:${PSM_GUEST_PACKAGES_FOLDER}/ServiceMockup/
+      - ../../01.code/is-packages/ServiceMockupLocalTest/:${PSM_GUEST_PACKAGES_FOLDER}/ServiceMockupLocalTest/
+      - ../../01.code/is-packages/SubscriberExample/:${PSM_GUEST_PACKAGES_FOLDER}/SubscriberExample/
+      - ../../01.code/is-packages/WxIsTestTools/:${PSM_GUEST_PACKAGES_FOLDER}/WxIsTestTools/
+      - ../../01.code/is-packages/WxIsTestToolsLocalTest/:${PSM_GUEST_PACKAGES_FOLDER}/WxIsTestToolsLocalTest/
+      # scripts
+      - ./scripts/:/mnt/scripts/
+    environment:
+      - PSM_GUEST_IS_HOME
+    entrypoint: /mnt/scripts/entrypoint.sh

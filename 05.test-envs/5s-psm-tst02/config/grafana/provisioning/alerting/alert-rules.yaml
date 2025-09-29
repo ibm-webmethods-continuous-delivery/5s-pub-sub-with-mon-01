@@ -1,0 +1,219 @@
+apiVersion: 1
+
+groups:
+- name: um-durable-alerts
+  orgId: 1
+  folder: UM Alerts
+  interval: 1m
+  rules:
+  - uid: um-outstanding-events-warning
+    title: UM Outstanding Events Warning
+    condition: C
+    data:
+    - refId: A
+      queryType: ''
+      relativeTimeRange:
+        from: 300
+        to: 0
+      datasourceUid: PBFA97CFB590B2093
+      model:
+        expr: sag_um_topic_durable_outstanding
+        intervalMs: 1000
+        maxDataPoints: 43200
+        refId: A
+    - refId: B
+      queryType: ''
+      relativeTimeRange:
+        from: 0
+        to: 0
+      datasourceUid: __expr__
+      model:
+        datasource:
+          type: __expr__
+          uid: __expr__
+        expression: A
+        reducer: last
+        type: reduce
+        refId: B
+    - refId: C
+      queryType: ''
+      relativeTimeRange:
+        from: 0
+        to: 0
+      datasourceUid: __expr__
+      model:
+        datasource:
+          type: __expr__
+          uid: __expr__
+        expression: $B >= 2000
+        type: math
+        refId: C
+    noDataState: NoData
+    execErrState: Alerting
+    for: 2m
+    annotations:
+      summary: "UM Outstanding Events Warning"
+      description: "The number of outstanding events is {{ printf \"%.0f\" $values.B.Value }}, which exceeds the warning threshold of 2000. Durable: {{ $values.B.Labels.durable_name }}"
+    labels:
+      severity: warning
+      component: universal-messaging
+      metric_type: outstanding_events
+
+  - uid: um-outstanding-events-critical
+    title: UM Outstanding Events Critical
+    condition: C
+    data:
+    - refId: A
+      queryType: ''
+      relativeTimeRange:
+        from: 300
+        to: 0
+      datasourceUid: PBFA97CFB590B2093
+      model:
+        expr: sag_um_topic_durable_outstanding
+        intervalMs: 1000
+        maxDataPoints: 43200
+        refId: A
+    - refId: B
+      queryType: ''
+      relativeTimeRange:
+        from: 0
+        to: 0
+      datasourceUid: __expr__
+      model:
+        datasource:
+          type: __expr__
+          uid: __expr__
+        expression: A
+        reducer: last
+        type: reduce
+        refId: B
+    - refId: C
+      queryType: ''
+      relativeTimeRange:
+        from: 0
+        to: 0
+      datasourceUid: __expr__
+      model:
+        datasource:
+          type: __expr__
+          uid: __expr__
+        expression: $B >= 10000
+        type: math
+        refId: C
+    noDataState: NoData
+    execErrState: Alerting
+    for: 1m
+    annotations:
+      summary: "UM Outstanding Events CRITICAL"
+      description: "The number of outstanding events is {{ printf \"%.0f\" $values.B.Value }}, which exceeds the critical threshold of 10000. Immediate attention required! Durable: {{ $values.B.Labels.durable_name }}"
+    labels:
+      severity: critical
+      component: universal-messaging
+      metric_type: outstanding_events
+
+  - uid: um-pending-events-warning
+    title: UM Pending Events Warning
+    condition: C
+    data:
+    - refId: A
+      queryType: ''
+      relativeTimeRange:
+        from: 300
+        to: 0
+      datasourceUid: PBFA97CFB590B2093
+      model:
+        expr: sag_um_topic_durable_pending
+        intervalMs: 1000
+        maxDataPoints: 43200
+        refId: A
+    - refId: B
+      queryType: ''
+      relativeTimeRange:
+        from: 0
+        to: 0
+      datasourceUid: __expr__
+      model:
+        datasource:
+          type: __expr__
+          uid: __expr__
+        expression: A
+        reducer: last
+        type: reduce
+        refId: B
+    - refId: C
+      queryType: ''
+      relativeTimeRange:
+        from: 0
+        to: 0
+      datasourceUid: __expr__
+      model:
+        datasource:
+          type: __expr__
+          uid: __expr__
+        expression: $B >= 2000
+        type: math
+        refId: C
+    noDataState: NoData
+    execErrState: Alerting
+    for: 2m
+    annotations:
+      summary: "UM Pending Events Warning"
+      description: "The number of pending unacknowledged events is {{ printf \"%.0f\" $values.B.Value }}, which exceeds the warning threshold of 2000. Durable: {{ $values.B.Labels.durable_name }}"
+    labels:
+      severity: warning
+      component: universal-messaging
+      metric_type: pending_events
+
+  - uid: um-pending-events-critical
+    title: UM Pending Events Critical
+    condition: C
+    data:
+    - refId: A
+      queryType: ''
+      relativeTimeRange:
+        from: 300
+        to: 0
+      datasourceUid: PBFA97CFB590B2093
+      model:
+        expr: sag_um_topic_durable_pending
+        intervalMs: 1000
+        maxDataPoints: 43200
+        refId: A
+    - refId: B
+      queryType: ''
+      relativeTimeRange:
+        from: 0
+        to: 0
+      datasourceUid: __expr__
+      model:
+        datasource:
+          type: __expr__
+          uid: __expr__
+        expression: A
+        reducer: last
+        type: reduce
+        refId: B
+    - refId: C
+      queryType: ''
+      relativeTimeRange:
+        from: 0
+        to: 0
+      datasourceUid: __expr__
+      model:
+        datasource:
+          type: __expr__
+          uid: __expr__
+        expression: $B >= 10000
+        type: math
+        refId: C
+    noDataState: NoData
+    execErrState: Alerting
+    for: 1m
+    annotations:
+      summary: "UM Pending Events CRITICAL"
+      description: "The number of pending unacknowledged events is {{ printf \"%.0f\" $values.B.Value }}, which exceeds the critical threshold of 10000. Immediate attention required! Durable: {{ $values.B.Labels.durable_name }}"
+    labels:
+      severity: critical
+      component: universal-messaging
+      metric_type: pending_events

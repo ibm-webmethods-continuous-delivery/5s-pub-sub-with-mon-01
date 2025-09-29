@@ -1,0 +1,182 @@
+volumes:
+  grafana-data: {}
+  influxdb-config: {}
+  influxdb-data: {}
+  prometheus-data: {}
+  um_data: {}
+  um_logs: {}
+  um_users: {}
+  msr_pub_logs: {}
+  msr_sub_logs: {}
+  loki-data: {}
+
+services:
+  msr-test-01-pub:
+    image: ${PSM_TEST_PUBLISHER_CONTAINER_IMAGE_REPOSITORY}:${PSM_TEST_PUBLISHER_CONTAINER_IMAGE_TAG}
+    hostname: msr-pub
+    container_name: 5s-psm-01-test02-msr-pub
+    ports:
+      - ${PSM_TEST_HOST_PORT_PREFIX}55:5555
+    volumes:
+      - ./application.properties:${PSM_TEST_GUEST_MOUNT_POINT_APPLICATION_PROPERTIES}
+      - msr_pub_logs:${PSM_TEST_GUEST_IS_HOME}/logs
+    mem_reservation: 100m
+    mem_limit: 400m
+    #cpus: 1
+    environment:
+      - SAG_IS_CONFIG_PROPERTIES=${PSM_TEST_GUEST_MOUNT_POINT_APPLICATION_PROPERTIES}
+      - JAVA_MIN_MEM=256m
+      - JAVA_MAX_MEM=256m
+      - PSM_TEST_GUEST_IS_ADMIN_PWD
+    depends_on:
+      um:
+        condition: service_healthy
+  msr-test-01-sub:
+    image: ${PSM_TEST_SUBSCRIBER_CONTAINER_IMAGE_REPOSITORY}:${PSM_TEST_SUBSCRIBER_CONTAINER_IMAGE_TAG}
+    hostname: msr-sub
+    container_name: 5s-psm-01-test02-msr-sub
+    ports:
+      - ${PSM_TEST_HOST_PORT_PREFIX}65:5555
+    volumes:
+      - ./application.properties:${PSM_TEST_GUEST_MOUNT_POINT_APPLICATION_PROPERTIES}
+      - msr_sub_logs:${PSM_TEST_GUEST_IS_HOME}/logs
+    mem_reservation: 100m
+    mem_limit: 400m
+    #cpus: 1
+    environment:
+      - SAG_IS_CONFIG_PROPERTIES=${PSM_TEST_GUEST_MOUNT_POINT_APPLICATION_PROPERTIES}
+      - JAVA_MIN_MEM=256m
+      - JAVA_MAX_MEM=256m
+      - PSM_TEST_GUEST_IS_ADMIN_PWD
+    depends_on:
+      um:
+        condition: service_healthy
+  
+  um:
+    image: ${PSM_TEST_UM_CONTAINER_IMAGE}:${PSM_TEST_UM_CONTAINER_TAG}
+    hostname: um
+    container_name: 5s-psm-01-test02-um
+    volumes:
+      - um_data:${PSM_TEST_GUEST_MOUNT_POINT_UM_REALM_DATA}
+      - um_logs:${PSM_TEST_GUEST_MOUNT_POINT_UM_REALM_LOGS}
+      - um_users:${PSM_TEST_GUEST_MOUNT_POINT_UM_REALM_USERS}
+    ports:
+      - ${PSM_TEST_HOST_PORT_PREFIX}90:9000
+    environment:
+      - REALM_NAME=umtest02
+  
+  jmeter:
+    image: alpine/jmeter
+    #hostname: jmeter
+    volumes:
+      - ./scripts/jmeter:/mnt/scripts
+      - ./jmeterProject/genericGetTest-01.jmx:/tmp/suite.jmx
+    environment:
+      - IS_ADMIN_PWD=${PSM_TEST_GUEST_IS_ADMIN_PWD}
+      - MIN_USERS_NO
+      - USER_NO_INCREMENT
+      - MAX_USERS_NO
+      - API_HOST
+      - API_PORT
+      - API_URI
+      - API_PROTOCOL
+      - API_USER
+      - API_USER_PWD
+    entrypoint: /mnt/scripts/entrypoint.sh
+  
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    depends_on:
+      - msr-test-01-pub
+    ports:
+      - ${PSM_TEST_HOST_PORT_PREFIX}99:9090
+
+  grafana:
+    image: grafana/grafana-oss
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./local/grafana:/mnt/local
+      - ./config/grafana/provisioning:/etc/grafana/provisioning
+    environment:
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - GF_SMTP_ENABLED
+      - GF_SMTP_HOST
+      - GF_SMTP_USER
+      - GF_SMTP_PASSWORD
+      - GF_SMTP_FROM_ADDRESS
+    ports:
+      - ${PSM_TEST_HOST_PORT_PREFIX}30:3000
+    depends_on:
+      - msr-test-01-pub
+      - prometheus
+
+    # Server that produces metrics data on the host
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    restart: unless-stopped
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    #ports:
+    #  - ${PSM_TEST_HOST_PORT_PREFIX}91:9100
+
+  # Server that produce metrics for the containers
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.52.1
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    mem_reservation: 100m
+    mem_limit: 400m
+    cpus: 1
+
+
+  loki:
+    image: grafana/loki:3.5
+    container_name: loki
+    volumes:
+      - ./config/loki/loki-config.yaml:/etc/loki/local-config.yaml
+      - loki-data:/loki
+    command: -config.file=/etc/loki/local-config.yaml
+    ports:
+      - ${PSM_TEST_HOST_PORT_PREFIX}31:3100
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3100/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  promtail:
+    image: grafana/promtail:3.5
+    container_name: promtail
+    volumes:
+      - ./config/promtail/promtail-config.yaml:/etc/promtail/config.yaml
+      - msr_pub_logs:/logs/msr_pub_logs:ro
+      - msr_sub_logs:/logs/msr_sub_logs:ro
+      - um_logs:/logs/um_logs:ro
+      - /var/log:/var/log:ro
+    command: -config.file=/etc/promtail/config.yaml
+    depends_on:
+      loki:
+        condition: service_healthy
+      msr-test-01-pub:
+        condition: service_started
+      msr-test-01-sub:
+        condition: service_started
+    restart: unless-stopped
+
+

@@ -1,0 +1,46 @@
+global:
+  scrape_interval:     5s # By default, scrape targets every 15 seconds.
+  external_labels:
+    monitor: 'api-mockup-test-01'
+
+scrape_configs:
+
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+  
+  # Node exporter for host metrics
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+      
+  # cAdvisor for containers metrics
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']
+
+  # Publisher metrics
+  - job_name: 'msr-pub'
+    static_configs:
+      - targets: ['msr-test-01-pub:5555']
+
+  # Subscriber metrics
+  - job_name: 'msr-sub'
+    static_configs:
+      - targets: ['msr-test-01-sub:5555']
+
+  # Test Harness metrics
+  - job_name: 'jmeter'
+    static_configs:
+      - targets: ['jmeter:9270']
+
+  # Universal Messaging metrics
+  - job_name: 'um_realm'
+    static_configs:
+      - targets: ['um:9200']
+
+  # custom subscriber metrics
+  - job_name: 'custom-subscriber-metrics'
+    metrics_path: '/invoke/Example.Subscriber.signals/prometheusEndpoint'
+    static_configs:
+      - targets: ['msr-test-01-sub:5555']

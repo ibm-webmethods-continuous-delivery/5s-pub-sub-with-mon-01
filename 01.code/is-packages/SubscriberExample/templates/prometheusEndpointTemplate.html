@@ -1,0 +1,3 @@
+# HELP demo_subscriber_retries_count Total number of trigger retries
+# TYPE demo_subscriber_retries_count counter
+demo_subscriber_retries_count{host="%value serverHost%_%value serverPort%"} %value currentRetries% %value currentTimeMillis%

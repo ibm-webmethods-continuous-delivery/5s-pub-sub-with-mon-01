@@ -1,0 +1,24 @@
+apiVersion: 1
+
+contactPoints:
+- orgId: 1
+  name: um-email-alerts
+  receivers:
+  - uid: um-email-receiver
+    type: email
+    settings:
+      addresses: "mihai.ungureanu@ibm.com" # Replace with actual email addresses
+      subject: "UM Alert: {{ .GroupLabels.alertname }} - {{ .GroupLabels.durable_name }}"
+      message: |
+        Alert: {{ .GroupLabels.alertname }}
+        Durable Name: {{ .GroupLabels.durable_name }}
+
+        {{ range .Alerts }}
+        Status: {{ .Status }}
+        Value: {{ .ValueString }}
+        {{ if .Annotations.summary }}Summary: {{ .Annotations.summary }}{{ end }}
+        {{ if .Annotations.description }}Description: {{ .Annotations.description }}{{ end }}
+        Timestamp: {{ .StartsAt }}
+        {{ end }}
+
+        Please check the Universal Messaging dashboard for more details.
