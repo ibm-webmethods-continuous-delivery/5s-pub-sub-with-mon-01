@@ -9,6 +9,12 @@
       <value name="node_type">record</value>
       <value name="node_subtype">unknown</value>
       <value name="is_public">false</value>
+      <value name="displayName"></value>
+      <value name="favorite"></value>
+      <value name="tags"></value>
+      <value name="since"></value>
+      <value name="deprecated"></value>
+      <value name="is_visible"></value>
       <value name="field_type">record</value>
       <value name="field_dim">0</value>
       <value name="wrapper_type">IData</value>
@@ -296,6 +302,12 @@
       <value name="node_type">record</value>
       <value name="node_subtype">unknown</value>
       <value name="is_public">false</value>
+      <value name="displayName"></value>
+      <value name="favorite"></value>
+      <value name="tags"></value>
+      <value name="since"></value>
+      <value name="deprecated"></value>
+      <value name="is_visible"></value>
       <value name="field_type">record</value>
       <value name="field_dim">0</value>
       <value name="wrapper_type">IData</value>
@@ -326,8 +338,8 @@
   <null name="auditfields_output"/>
   <record name="auditsettings" javaclass="com.wm.util.Values">
     <value name="document_data">1</value>
-    <value name="startExecution">false</value>
-    <value name="stopExecution">false</value>
+    <value name="startExecution">true</value>
+    <value name="stopExecution">true</value>
     <value name="onError">true</value>
   </record>
   <record name="circuitbreakersettings" javaclass="com.wm.util.Values">
