@@ -14,6 +14,6 @@ docker exec -it -u root $containerID sh
 microdnf -y update
 microdnf -y install findutils
 
-cd opt/softwareag/IntegrationServer/packages/
+cd /opt/softwareag/IntegrationServer/packages/
 find . -exec chmod a+rw {} \;
 ```
