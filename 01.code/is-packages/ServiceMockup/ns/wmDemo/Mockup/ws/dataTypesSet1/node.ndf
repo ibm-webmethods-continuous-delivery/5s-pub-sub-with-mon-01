@@ -15,7 +15,7 @@
   <number name="mtomThreshold" type="Integer">0</number>
   <null name="externalWSDL"/>
   <null name="externalWSDLURL"/>
-  <value name="WSDLURL">http://d7f0c00ae71c:5555/ws/wmDemo.Mockup.ws:dataTypesSet1?WSDL</value>
+  <value name="WSDLURL">http://f95b2e7a6192:5555/ws/wmDemo.Mockup.ws:dataTypesSet1?WSDL</value>
   <value name="definitionName">dataTypesSet1</value>
   <value name="version">V_10_15</value>
   <null name="schemaDomain"/>
