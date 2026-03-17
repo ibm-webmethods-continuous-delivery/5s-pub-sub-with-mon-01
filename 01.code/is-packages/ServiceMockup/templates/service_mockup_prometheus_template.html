@@ -1,0 +1,7 @@
+# HELP demo_mock_managed_exceptions Total number of counted sent messages
+# TYPE demo_mock_managed_exceptions counter
+demo_mock_managed_exceptions {host="%value serverHost%_%value serverPort%"} %value managedExceptions% %value currentTimeMillis%
+
+# HELP demo_mock_unexpected_exceptions Total number of counted sent messages
+# TYPE demo_mock_unexpected_exceptions counter
+demo_mock_unexpected_exceptions {host="%value serverHost%_%value serverPort%"} %value unexpectedExceptions% %value currentTimeMillis%

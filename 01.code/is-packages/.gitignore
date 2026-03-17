@@ -2,3 +2,5 @@
 *.frag
 *.class
 *.jar
+*.cnf
+*.dat

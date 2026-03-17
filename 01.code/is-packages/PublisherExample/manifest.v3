@@ -4,7 +4,10 @@
   <value name="enabled">yes</value>
   <value name="system_package">no</value>
   <value name="version">1.0</value>
-  <null name="startup_services"/>
+  <record name="startup_services" javaclass="com.wm.util.Values">
+    <null name="wmDemo.Publisher.startup:declareGVars"/>
+    <null name="wmDemo.Publisher.signals.startup:setPrometheusEndpointPermisions"/>
+  </record>
   <null name="shutdown_services"/>
   <null name="replication_services"/>
   <record name="requires" javaclass="com.wm.util.Values">
@@ -13,9 +16,27 @@
   <value name="listACL">Default</value>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <null name="build"/>
-  <null name="description"/>
+  <value name="build"></value>
+  <value name="description"></value>
   <null name="created_date"/>
-  <null name="extendedProperties"/>
+  <array name="extendedProperties" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="key">displayName</value>
+      <value name="value"></value>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="key">trusted</value>
+      <value name="value">no</value>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="key">status</value>
+      <value name="value">Development</value>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="key">tags</value>
+      <value name="value"></value>
+    </record>
+  </array>
   <null name="target_server_version"/>
+  <value name="name">PublisherExample</value>
 </Values>

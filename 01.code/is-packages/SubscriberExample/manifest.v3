@@ -5,8 +5,8 @@
   <value name="system_package">no</value>
   <value name="version">1.0</value>
   <record name="startup_services" javaclass="com.wm.util.Values">
-    <null name="Example.Subscriber.signals.startup:setPrometheusEndpointPermisions"/>
-    <null name="Example.Subscriber.startup:declareGVars"/>
+    <null name="wmDemo.Subscriber.startup:declareGVars"/>
+    <null name="wmDemo.Subscriber.signals.startup:setPrometheusEndpointPermisions"/>
   </record>
   <null name="shutdown_services"/>
   <null name="replication_services"/>
@@ -22,4 +22,5 @@
   <null name="created_date"/>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
+  <value name="name">SubscriberExample</value>
 </Values>

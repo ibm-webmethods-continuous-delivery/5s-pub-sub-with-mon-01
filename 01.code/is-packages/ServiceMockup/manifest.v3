@@ -6,6 +6,7 @@
   <value name="version">1.0</value>
   <record name="startup_services" javaclass="com.wm.util.Values">
     <null name="wmDemo.Mockup.startup:declareSecurity"/>
+    <null name="wmDemo.Mockup.signals.startup:setPrometheusEndpointPermisions"/>
   </record>
   <null name="shutdown_services"/>
   <null name="replication_services"/>
@@ -21,4 +22,5 @@
   <null name="created_date"/>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
+  <value name="name">ServiceMockup</value>
 </Values>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="shared">CnByaXZhdGUgc3RhdGljIGxvbmcgbWFuYWdlZEV4Y2VwdGlvbnM9MCwgdW5leHBlY3RlZEV4Y2Vw
+dGlvbnM9MDsKCnByaXZhdGUgc3RhdGljIHN5bmNocm9uaXplZCB2b2lkIGluY01hbmFnZWQoKXsK
+CW1hbmFnZWRFeGNlcHRpb25zKys7Cn0KCQpwcml2YXRlIHN0YXRpYyBzeW5jaHJvbml6ZWQgdm9p
+ZCBpbmNVbmV4cGVjdGVkKCl7Cgl1bmV4cGVjdGVkRXhjZXB0aW9ucysrOwp9CgkK</value>
+  <value name="encodeutf8">true</value>
+</Values>

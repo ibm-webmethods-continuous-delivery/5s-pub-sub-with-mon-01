@@ -1,0 +1,3 @@
+# HELP demo_publisher_sent_count Total number of counted sent messages
+# TYPE demo_publisher_sent_count counter
+demo_publisher_sent_count{host="%value serverHost%_%value serverPort%"} %value currentSent% %value currentTimeMillis%

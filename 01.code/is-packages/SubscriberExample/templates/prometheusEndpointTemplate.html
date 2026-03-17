@@ -1,3 +1,53 @@
 # HELP demo_subscriber_retries_count Total number of trigger retries
 # TYPE demo_subscriber_retries_count counter
-demo_subscriber_retries_count{host="%value serverHost%_%value serverPort%"} %value currentRetries% %value currentTimeMillis%
+demo_subscriber_retries_count{host="%value /serverHost%_%value /serverPort%"} %value currentRetries% %value currentTimeMillis%
+
+# HELP demo_subscriber_message_um_age_current_milliseconds Current UM message age in queue (milliseconds)
+# TYPE demo_subscriber_message_um_age_current_milliseconds gauge
+%loop stalenessMetrics%demo_subscriber_message_um_age_current_milliseconds{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value currentUmAgeMillis% %value /currentTimeMillis%
+%endloop%
+
+# HELP demo_subscriber_message_um_age_avg_milliseconds Average UM message age in queue (milliseconds)
+# TYPE demo_subscriber_message_um_age_avg_milliseconds gauge
+%loop stalenessMetrics%demo_subscriber_message_um_age_avg_milliseconds{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value lastPublishedAvgUmAge% %value /currentTimeMillis%
+%endloop%
+
+# HELP demo_subscriber_message_um_age_min_milliseconds Minimum UM message age in queue (milliseconds)
+# TYPE demo_subscriber_message_um_age_min_milliseconds gauge
+%loop stalenessMetrics%demo_subscriber_message_um_age_min_milliseconds{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value minUmAgeMillis% %value /currentTimeMillis%
+%endloop%
+
+# HELP demo_subscriber_message_um_age_max_milliseconds Maximum UM message age in queue (milliseconds)
+# TYPE demo_subscriber_message_um_age_max_milliseconds gauge
+%loop stalenessMetrics%demo_subscriber_message_um_age_max_milliseconds{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value maxUmAgeMillis% %value /currentTimeMillis%
+%endloop%
+
+# HELP demo_subscriber_message_measured_age_current_milliseconds Current measured message age in queue (milliseconds)
+# TYPE demo_subscriber_message_measured_age_current_milliseconds gauge
+%loop stalenessMetrics%demo_subscriber_message_measured_age_current_milliseconds{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value currentMeasuredAgeMillis% %value /currentTimeMillis%
+%endloop%
+
+# HELP demo_subscriber_message_measured_age_avg_milliseconds Average measured message age in queue (milliseconds)
+# TYPE demo_subscriber_message_measured_age_avg_milliseconds gauge
+%loop stalenessMetrics%demo_subscriber_message_measured_age_avg_milliseconds{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value lastPublishedAvgMeasuredAge% %value /currentTimeMillis%
+%endloop%
+
+# HELP demo_subscriber_message_measured_age_min_milliseconds Minimum measured message age in queue (milliseconds)
+# TYPE demo_subscriber_message_measured_age_min_milliseconds gauge
+%loop stalenessMetrics%demo_subscriber_message_measured_age_min_milliseconds{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value minMeasuredAgeMillis% %value /currentTimeMillis%
+%endloop%
+
+# HELP demo_subscriber_message_measured_age_max_milliseconds Maximum measured message age in queue (milliseconds)
+# TYPE demo_subscriber_message_measured_age_max_milliseconds gauge
+%loop stalenessMetrics%demo_subscriber_message_measured_age_max_milliseconds{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value maxMeasuredAgeMillis% %value /currentTimeMillis%
+%endloop%
+
+# HELP demo_subscriber_message_count Total number of messages processed
+# TYPE demo_subscriber_message_count counter
+%loop stalenessMetrics%demo_subscriber_message_count{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value messageCount% %value /currentTimeMillis%
+%endloop%
+
+# HELP demo_subscriber_time_since_last_message_milliseconds Time since last message was received (milliseconds)
+# TYPE demo_subscriber_time_since_last_message_milliseconds gauge
+%loop stalenessMetrics%demo_subscriber_time_since_last_message_milliseconds{trigger="%value consumingServiceNs%",host="%value /serverHost%_%value /serverPort%"} %value timeSinceLastMessageMillis% %value /currentTimeMillis%
+%endloop%

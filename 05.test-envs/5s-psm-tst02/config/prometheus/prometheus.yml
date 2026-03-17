@@ -8,16 +8,16 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
-  
-  # Node exporter for host metrics
-  - job_name: 'node-exporter'
+
+  # # Node exporter for host metrics
+  # - job_name: 'node-exporter'
+  #   static_configs:
+  #     - targets: ['node-exporter:9100']
+
+  - job_name: 'telegraf'
+    scrape_interval: 5s
     static_configs:
-      - targets: ['node-exporter:9100']
-      
-  # cAdvisor for containers metrics
-  - job_name: 'cadvisor'
-    static_configs:
-      - targets: ['cadvisor:8080']
+      - targets: ['telegraf:9273']
 
   # Publisher metrics
   - job_name: 'msr-pub'
@@ -39,8 +39,19 @@ scrape_configs:
     static_configs:
       - targets: ['um:9200']
 
+  # custom publisher metrics
+  - job_name: 'custom-sender-metrics'
+    metrics_path: '/invoke/wmDemo.Publisher.signals/prometheusEndpoint'
+    static_configs:
+      - targets: ['msr-test-01-pub:5555']
+
+  - job_name: 'custom-mock-metrics'
+    metrics_path: '/invoke/wmDemo.Mockup.signals/prometheusEndpoint'
+    static_configs:
+      - targets: ['msr-test-01-pub:5555']
+
   # custom subscriber metrics
   - job_name: 'custom-subscriber-metrics'
-    metrics_path: '/invoke/Example.Subscriber.signals/prometheusEndpoint'
+    metrics_path: '/invoke/wmDemo.Subscriber.signals/prometheusEndpoint'
     static_configs:
       - targets: ['msr-test-01-sub:5555']

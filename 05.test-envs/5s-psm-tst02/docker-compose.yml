@@ -51,7 +51,7 @@ services:
     depends_on:
       um:
         condition: service_healthy
-  
+
   um:
     image: ${PSM_TEST_UM_CONTAINER_IMAGE}:${PSM_TEST_UM_CONTAINER_TAG}
     hostname: um
@@ -64,7 +64,7 @@ services:
       - ${PSM_TEST_HOST_PORT_PREFIX}90:9000
     environment:
       - REALM_NAME=umtest02
-  
+
   jmeter:
     image: alpine/jmeter
     #hostname: jmeter
@@ -83,7 +83,7 @@ services:
       - API_USER
       - API_USER_PWD
     entrypoint: /mnt/scripts/entrypoint.sh
-  
+
   prometheus:
     image: prom/prometheus
     volumes:
@@ -107,41 +107,23 @@ services:
       - GF_SMTP_USER
       - GF_SMTP_PASSWORD
       - GF_SMTP_FROM_ADDRESS
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
     ports:
       - ${PSM_TEST_HOST_PORT_PREFIX}30:3000
     depends_on:
       - msr-test-01-pub
       - prometheus
 
-    # Server that produces metrics data on the host
-  node-exporter:
-    image: prom/node-exporter:latest
-    container_name: node-exporter
-    restart: unless-stopped
+  telegraf:
+    image: telegraf:latest
+    hostname: telegraf
     volumes:
-      - /proc:/host/proc:ro
-      - /sys:/host/sys:ro
-      - /:/rootfs:ro
-    command:
-      - '--path.procfs=/host/proc'
-      - '--path.rootfs=/rootfs'
-      - '--path.sysfs=/host/sys'
-      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
-    #ports:
-    #  - ${PSM_TEST_HOST_PORT_PREFIX}91:9100
-
-  # Server that produce metrics for the containers
-  cadvisor:
-    image: gcr.io/cadvisor/cadvisor:v0.52.1
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:rw
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-    mem_reservation: 100m
-    mem_limit: 400m
-    cpus: 1
-
+      - ./config/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    user: telegraf:${DOCKER_GROUP_ID}
+    ports:
+      - "9273:9273"
 
   loki:
     image: grafana/loki:3.5
