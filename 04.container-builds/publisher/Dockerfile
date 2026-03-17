@@ -1,4 +1,4 @@
-ARG __from_img=ibmwebmethods.azurecr.io/webmethods-microservicesruntime:11.1.0.5
+ARG __from_img=ibmwebmethods.azurecr.io/webmethods-microservicesruntime:11.1.0.9
 FROM ${__from_img}
 
 ## Context MUST be the repository root folder

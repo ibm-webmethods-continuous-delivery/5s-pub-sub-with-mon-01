@@ -16,8 +16,9 @@ services:
     environment:
       # TODO: check SAG_ variable names after IBM's acquisition, still working for now...
       - SAG_IS_CONFIG_PROPERTIES=${PSM_GUEST_MOUNT_POINT_APPLICATION_PROPERTIES}
+      - IS_ADMIN_PWD
     ports:
-      - ${WMDF_PORT_PREFIX}55:5555
+      - ${PSM_PORT_PREFIX}55:5555
     depends_on:
       um:
         condition: service_healthy
@@ -29,7 +30,7 @@ services:
       - um_logs:${PSM_GUEST_MOUNT_POINT_UM_REALM_LOGS}
       - um_users:${PSM_GUEST_MOUNT_POINT_UM_REALM_USERS}
     ports:
-      - ${WMDF_PORT_PREFIX}90:9000
+      - ${PSM_PORT_PREFIX}90:9000
     environment:
       - REALM_NAME=umdev01
 

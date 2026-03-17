@@ -21,3 +21,6 @@ schema_config:
 storage_config:
   filesystem:
     directory: /tmp/loki/chunks
+limits_config:
+  ingestion_rate_mb: 30          # Increased from 4MB
+  ingestion_burst_size_mb: 20    # Increased from default
