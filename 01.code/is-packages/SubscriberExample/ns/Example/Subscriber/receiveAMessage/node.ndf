@@ -7,6 +7,12 @@
   <value name="node_pkg">SubscriberExample</value>
   <value name="node_comment"></value>
   <value name="is_public">false</value>
+  <value name="displayName"></value>
+  <value name="favorite"></value>
+  <value name="tags"></value>
+  <value name="since"></value>
+  <value name="deprecated"></value>
+  <value name="is_visible"></value>
   <value name="trigger_type">broker-trigger</value>
   <record name="trigger" javaclass="com.wm.util.Values">
     <value name="concurrent">true</value>
@@ -18,11 +24,12 @@
       <value name="onError">true</value>
     </record>
     <record name="redeliveryOptions" javaclass="com.wm.util.Values">
-      <value name="max">5</value>
-      <value name="delayInterval">10000</value>
+      <value name="max">3</value>
+      <value name="delayInterval">30000</value>
       <value name="onRedeliveryFailure">1</value>
+      <value name="resumeTaskSvcName">Example.Subscriber:resMon</value>
     </record>
-    <value name="maxConcurrentThreads">1</value>
+    <value name="maxConcurrentThreads">10</value>
     <value name="inDoubtDetection">false</value>
     <value name="resolveWithHistory">false</value>
     <value name="resolutionHistoryTTL">7200000</value>
@@ -43,14 +50,14 @@
     </array>
     <value name="processingSuspended">false</value>
     <value name="retrievalSuspended">false</value>
-    <value name="transportAckSize">1</value>
+    <value name="transportAckSize">10</value>
     <value name="deliverEnabled">true</value>
     <value name="executeEnabled">true</value>
     <value name="ordering">0</value>
     <value name="joinTimeout">86400000</value>
     <value name="serialSuspendOnError">false</value>
-    <value name="docsPrefetchMax">10</value>
-    <value name="docsPrefetchMin">4</value>
+    <value name="docsPrefetchMax">100</value>
+    <value name="docsPrefetchMin">40</value>
     <value name="priorityEnabled">false</value>
     <null name="namedObjectString"/>
   </record>
